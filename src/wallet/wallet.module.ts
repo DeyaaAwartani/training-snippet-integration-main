@@ -6,10 +6,7 @@ import { Wallet } from './wallet.entity';
 import { AuthModule } from 'src/auth/auth.module';
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([Wallet]),
-    AuthModule
-  ],
+  imports: [TypeOrmModule.forFeature([Wallet])],
   controllers: [WalletController],
   providers: [WalletService],
   exports: [WalletService, TypeOrmModule],
